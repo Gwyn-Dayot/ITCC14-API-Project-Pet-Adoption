@@ -2,21 +2,25 @@
 
 ## Members
 
-1. [Elisha Cogtas](https://github.com/christinedy)
+1. [Elisha Cogtas](https://github.com/elliecogtas)
 2. [Christine Dy](https://github.com/christinedy)
 3. [Klent Pimentel](https://github.com/klentpimentel22)
 
 ----------------------------
 
 ## Milestone 1 (Nov Week 1): Project Proposal & Planning
+
 * What we'll do:
+
 Finalize our project topic (“Pet Adoption API”), define the main features (pet listings, adoption requests, user management), and outline our database models. Start writing the project proposal (Chapters 1 & 2).
  
 * Deliverables:
+  
   * Updated README.md with Project Overview and Data Models section.
   * Completed ITCC 14 Final Project Document (Chapters 1 & 2).
 
 * Checklist:
+
 - [x] Finalize project topic and objectives
 - [ ] Define core entities (Pets, Users, Adoptions)
 - [ ] Write “Problem Statement” and “Objectives”
