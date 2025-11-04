@@ -47,7 +47,7 @@ Design the API structure and plan endpoints (e.g., /pets, /users, /adoptions). S
 
 -----------------------------------------------------
 
-##Milestone 3 (Nov Week 3): Database & Core Features
+## Milestone 3 (Nov Week 3): Database & Core Features
 
 * What we'll do:
 
@@ -67,7 +67,7 @@ Implement the database (SQLite/MongoDB) and connect it to the API. Add core feat
 
 ------------------------------------------------
 
-##Milestone 4 (Nov Week 4): Validation & Improvements
+## Milestone 4 (Nov Week 4): Validation & Improvements
 
 * What we'll do:
 
