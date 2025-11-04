@@ -2,7 +2,7 @@
 
 ## Members
 
-1. [Elisha Cogtas (https://github.com/klentpimentel22)]
+1. [Elisha Cogtas] (https://github.com/klentpimentel22)
 2. [Christine Dy (https://github.com/christinedy)]
 3. [Klent Pimentel (https://github.com/klentpimentel22)]
 
