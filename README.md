@@ -18,9 +18,9 @@ Finalize our project topic (“Pet Adoption API”), define the main features (p
 
 * Checklist:
 - [x] Finalize project topic and objectives
-- [] Define core entities (Pets, Users, Adoptions)
-- [] Write “Problem Statement” and “Objectives”
-- [] Create initial data model diagram
+- [ ] Define core entities (Pets, Users, Adoptions)
+- [ ] Write “Problem Statement” and “Objectives”
+- [ ] Create initial data model diagram
 
 --------------------------------
 
@@ -33,10 +33,10 @@ Design the API structure and plan endpoints (e.g., /pets, /users, /adoptions). S
   * Functional project folder with main API file (e.g., app.py).
 
 * Checklist:
-- [] Plan and document all API endpoints
-- [] Set up Flask environment
-- [] Create initial routes and run local server
-- [] Commit setup files and documentation to GitHub
+- [ ] Plan and document all API endpoints
+- [ ] Set up Flask environment
+- [ ] Create initial routes and run local server
+-  [] Commit setup files and documentation to GitHub
 
 -----------------------------------------------------
 
@@ -49,10 +49,10 @@ Implement the database (SQLite/MongoDB) and connect it to the API. Add core feat
   * Postman test results of working endpoints.
 
 * Checklist:
-- [] Create database models (Pets, Users, Adoptions)
-- [] Implement GET/POST endpoints for Pets and Adoptions
-- [] Test endpoints in Postman
-- [] Commit all working code to GitHub
+- [ ] Create database models (Pets, Users, Adoptions)
+- [ ] Implement GET/POST endpoints for Pets and Adoptions
+- [ ] Test endpoints in Postman
+- [ ] Commit all working code to GitHub
 
 ------------------------------------------------
 
@@ -65,8 +65,8 @@ Add input validation, error handling, and improve the response messages. Test al
   * Postman test documentation or screenshots
 
 * Checklist:
-- [] Add input validation for forms
-- [] Handle missing data and invalid IDs
-- [] Verify all CRUD routes work correctly
-- [] Update documentation and push changes
+- [ ] Add input validation for forms
+- [ ] Handle missing data and invalid IDs
+- [ ] Verify all CRUD routes work correctly
+- [ ] Update documentation and push changes
 
