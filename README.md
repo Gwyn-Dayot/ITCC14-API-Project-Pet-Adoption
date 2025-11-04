@@ -23,7 +23,7 @@ Finalize our project topic (“Pet Adoption API”), define the main features (p
 
 - [x] Finalize project topic and objectives
 - [ ] Define core entities (Pets, Users, Adoptions)
-- [ ] Write “Problem Statement” and “Objectives”
+- [x] Write “Problem Statement” and “Objectives”
 - [ ] Create initial data model diagram
 
 --------------------------------
