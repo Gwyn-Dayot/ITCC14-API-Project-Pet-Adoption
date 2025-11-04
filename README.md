@@ -1,12 +1,10 @@
 # ITCC14-API-Project-Pet-Adoption
 
 ## Members
-[Elisha Cogtas][1]
-⋮
-[1]: https://github.com/klentpimentel22
 
-2. [Christine Dy (https://github.com/christinedy)]
-3. [Klent Pimentel (https://github.com/klentpimentel22)]
+1. [Elisha Cogtas](https://github.com/christinedy)
+2. [Christine Dy](https://github.com/christinedy)
+3. [Klent Pimentel](https://github.com/klentpimentel22)
 
 ----------------------------
 
