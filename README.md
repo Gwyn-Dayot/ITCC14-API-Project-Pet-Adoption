@@ -2,9 +2,9 @@
 
 ## Members
 
-1. [Cogtas](https://github.com/elliecogtas)
-2. [Dy](https://github.com/christinedy)
-3. [Pimentel](https://github.com/klentpimentel22)
+1. [Elisha Cogtas](https://github.com/elliecogtas)
+2. [Christine Dy](https://github.com/christinedy)
+3. [Klent Pimentel](https://github.com/klentpimentel22)
 
 ----------------------------
 
