@@ -86,4 +86,5 @@ Add input validation, error handling, and improve the response messages. Test al
 - [ ] Update documentation and push changes
 
 ## Team Members
+- Cogtas, Elisha Lucca D.
 - Christine Dy
