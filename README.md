@@ -2,9 +2,9 @@
 
 ## Members
 
-1. [Cogtas](https://github.com/elliecogtas)
-2. [Dy](https://github.com/christinedy)
-3. [Pimentel](https://github.com/klentpimentel22)
+1. [Elisha Cogtas](https://github.com/elliecogtas)
+2. [Christine Dy](https://github.com/christinedy)
+3. [Klent Pimentel](https://github.com/klentpimentel22)
 
 ----------------------------
 
@@ -85,5 +85,8 @@ Add input validation, error handling, and improve the response messages. Test al
 - [ ] Verify all CRUD routes work correctly
 - [ ] Update documentation and push changes
 
-##Team Members
+## Team Members
 - Klent U. Pimentel 
+## Team Members
+- Cogtas, Elisha Lucca D.
+- Christine Dy
