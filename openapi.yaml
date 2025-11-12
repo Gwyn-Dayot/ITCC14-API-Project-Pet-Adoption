@@ -1,0 +1,82 @@
+openapi: 3.0.3
+info:
+  title: Pet Adoption API
+  description: Simple API to manage pets for adoption.
+  version: "1.0.0"
+
+servers:
+  - url: http://localhost:3000
+    description: Local server
+
+paths:
+  /pets:
+    get:
+      summary: Get all pets
+      responses:
+        '200':
+          description: List of pets
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Pet'
+    post:
+      summary: Add a new pet
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NewPet'
+      responses:
+        '201':
+          description: Pet created
+  /pets/{id}:
+    get:
+      summary: Get a pet by ID
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Pet found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pet'
+        '404':
+          description: Pet not found
+
+components:
+  schemas:
+    Pet:
+      type: object
+      properties:
+        id:
+          type: string
+          example: "1"
+        name:
+          type: string
+          example: "Mochi"
+        species:
+          type: string
+          example: "dog"
+        age:
+          type: integer
+          example: 2
+        adopted:
+          type: boolean
+          example: false
+    NewPet:
+      type: object
+      properties:
+        name:
+          type: string
+        species:
+          type: string
+        age:
+          type: integer
