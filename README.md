@@ -22,7 +22,7 @@ Finalize our project topic (“Pet Adoption API”), define the main features (p
 * Checklist:
 
 - [x] Finalize project topic and objectives
-- [ ] [Define core entities](https://docs.google.com/document/d/1gwaxaenAsN2hqLeil731vQQ-qCVkPmXtISHLpshR6i0/edit?tab=t.8ng2ahe8vcia)
+- [x] [Define core entities](https://docs.google.com/document/d/1gwaxaenAsN2hqLeil731vQQ-qCVkPmXtISHLpshR6i0/edit?tab=t.8ng2ahe8vcia)
 - [x] Write “Problem Statement” and “Objectives”
 - [ ] Create initial data model diagram
 
