@@ -43,7 +43,7 @@ Design the API structure and plan endpoints (e.g., /pets, /users, /adoptions). S
 - [ ] Plan and document all API endpoints
 - [ ] Set up Flask environment
 - [ ] Create initial routes and run local server
--  [] Commit setup files and documentation to GitHub
+- [ ] Commit setup files and documentation to GitHub
 
 -----------------------------------------------------
 
