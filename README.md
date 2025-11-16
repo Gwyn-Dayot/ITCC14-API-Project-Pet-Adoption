@@ -24,7 +24,10 @@ Finalize our project topic (“Pet Adoption API”), define the main features (p
 - [x] Finalize project topic and objectives
 - [x] [Define core entities](https://docs.google.com/document/d/1gwaxaenAsN2hqLeil731vQQ-qCVkPmXtISHLpshR6i0/edit?tab=t.8ng2ahe8vcia)
 - [x] Write “Problem Statement” and “Objectives”
-- [ ] Create initial data model diagram
+- [x] Create initial data model diagram
+
+<img width="1316" height="968" alt="data_model" src="https://github.com/user-attachments/assets/af26bcc2-a3a9-4a2a-86e3-c22991a6e967" />
+
 
 --------------------------------
 
@@ -40,8 +43,8 @@ Design the API structure and plan endpoints (e.g., /pets, /users, /adoptions). S
 
 * Checklist:
 
-- [ ] Plan and document all API endpoints
-- [ ] Set up Flask environment
+- [x] Plan and document all API endpoints
+- [x] Set up Flask environment
 - [ ] Create initial routes and run local server
 - [ ] Commit setup files and documentation to GitHub
 
