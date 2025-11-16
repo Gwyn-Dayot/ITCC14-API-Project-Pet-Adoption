@@ -1,0 +1,17 @@
+{
+  "name": "itcc14-api-project-pet-adoption",
+  "version": "1.0.0",
+  "description": "1. [Elisha Cogtas](https://github.com/elliecogtas)\r 2. [Christine Dy](https://github.com/christinedy)\r 3. [Klent Pimentel](https://github.com/klentpimentel22)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "swagger-ui-express": "^5.0.1",
+    "yaml": "^2.8.1"
+  }
+}
