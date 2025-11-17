@@ -1,82 +1,543 @@
+#Pet Adoption API
+
 openapi: 3.0.3
 info:
   title: Pet Adoption API
-  description: Simple API to manage pets for adoption.
-  version: "1.0.0"
+  description: This API enables users to view available pets and submit adoption requests.
+  version: '1.2'
 
-servers:
-  - url: http://localhost:3000
-    description: Local server
+tags:
+  - name: animals
+    description: Endpoints for animals
+  - name: adopters
+    description: Endpoints for adopters
+  - name: adoption applications
+    description: Endpoints for adoption applications
+  - name: appointments
+    description: Endpoints for appointments
+  - name: medical records
+    description: Endpoints for medical records
+  - name: staff
+    description: Endpoints for staff
+  - name: users
+    description: Endpoints for users
 
 paths:
-  /pets:
+  /animals:
     get:
-      summary: Get all pets
+      summary: retrieve all animals
+      tags: [animals]
       responses:
-        '200':
-          description: List of pets
+        200:
+          description: Successful Response
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Pet'
+                  $ref: '#/components/schemas/Animal'
+        500:
+          description: Error
     post:
-      summary: Add a new pet
+      summary: add a new animal
+      tags: [animals]
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/NewPet'
+              $ref: '#/components/schemas/Animal'
       responses:
-        '201':
-          description: Pet created
-  /pets/{id}:
+        201:
+          description: Animal successfully added
+        400:
+          description: Invalid input
+
+  /animals/{animalId}:
     get:
-      summary: Get a pet by ID
+      summary: get details of a specific animal
+      tags: [animals]
       parameters:
-        - name: id
+        - name: animalId
           in: path
           required: true
           schema:
-            type: string
+            type: integer
       responses:
-        '200':
-          description: Pet found
+        200:
+          description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Pet'
-        '404':
-          description: Pet not found
+                $ref: '#/components/schemas/Animal'
+        404:
+          description: Not found
+    patch:
+      summary: update a specific animal
+      tags: [animals]
+      parameters:
+        - name: animalId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Animal'
+      responses:
+        200:
+          description: Animal successfully updated
+        400:
+          description: Invalid input
+        404:
+          description: Not found
+    delete:
+      summary: remove an animal
+      tags: [animals]
+      parameters:
+        - name: animalId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Successfully deleted
+        404:
+          description: Animal not found
+
+  /adopters:
+    get:
+      summary: retrieve all adopters
+      tags: [adopters]
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Adopter'
+    post:
+      summary: add a new adopter
+      tags: [adopters]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Adopter'
+      responses:
+        201:
+          description: Adopter successfully added
+
+  /adopters/{adopterId}:
+    get:
+      summary: get details of a specific adopter
+      tags: [adopters]
+      parameters:
+        - name: adopterId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Adopter'
+        404:
+          description: Not found
+    patch:
+      summary: update a specific adopter
+      tags: [adopters]
+      parameters:
+        - name: adopterId
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Adopter'
+      responses:
+        200:
+          description: Adopter successfully updated
+        404:
+          description: Not found
+    delete:
+      summary: delete an adopter
+      tags: [adopters]
+      parameters:
+        - name: adopterId
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Successfully deleted
+        404:
+          description: Not found
+          
+  /adoption-applications:
+    get:
+      summary: retrieve all adoption applications 
+      tags: [adoption applications]
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array 
+                items: 
+                  $ref: '#/components/schemas/Application'
+    post: 
+      summary: add a new application
+      tags: [adoption applications]
+      requestBody:
+        required: true 
+        content: 
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Application'
+      responses:
+        201:
+          description: Application successfully created
+          
+  /adoption-applications/{applicationId}:
+    get:
+      summary: get details of a specific application 
+      tags: [adoption applications]
+      parameters: 
+        - name: applicationId
+          in: path
+          required: true 
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Application'
+        404:
+          description: Not found
+    patch: 
+      summary: update an adoption application
+      tags: [adoption applications]
+      parameters:
+        - name: applicationId
+          in: path
+          required: true
+          schema:
+            type: integer 
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Application'
+      responses:
+        200:
+          description: Application successfully updated
+        404:
+          description: Not found 
+    delete:
+      summary: delete an application
+      tags: [adoption applications]
+      parameters:
+        - name: applicationId
+          in: path
+          required: true 
+          schema:
+            type: integer 
+      responses:
+        200:
+          description: Successfully deleted
+        404:
+          description: Not found 
+          
+  /appointments:
+    get:
+      summary: retrieve all appointments
+      tags: [appointments]
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array 
+                items: 
+                  $ref: '#/components/schemas/Appointment'
+    post: 
+      summary: schedule an appointment
+      tags: [appointments]
+      requestBody:
+        required: true 
+        content: 
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Appointment'
+      responses:
+        201:
+          description: Appointment successfully scheduled
+          
+  /appointments/{appointmentId}:
+    get:
+      summary: get details of an appointment 
+      tags: [appointments]
+      parameters: 
+        - name: appointmentId
+          in: path
+          required: true 
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+        404:
+          description: Not found
+    patch: 
+      summary: update an appointment
+      tags: [appointments]
+      parameters:
+        - name: appointmentId
+          in: path
+          required: true
+          schema:
+            type: integer 
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Appointment'
+      responses:
+        200:
+          description: Appointment successfully updated
+        404:
+          description: Not found 
+    delete:
+      summary: cancel an appointment
+      tags: [appointments]
+      parameters:
+        - name: appointmentId
+          in: path
+          required: true 
+          schema:
+            type: integer 
+      responses:
+        200:
+          description: Appointment successfully canceled
+        404:
+          description: Not found
+          
+  /medical-records:
+    get:
+      summary: retrieve all medical records
+      tags: [medical records]
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array 
+                items: 
+                  $ref: '#/components/schemas/MedicalRecord'
+    post: 
+      summary: add a new medical record
+      tags: [medical records]
+      requestBody:
+        required: true 
+        content: 
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MedicalRecord'
+      responses:
+        201:
+          description: Medical record successfully added
+          
+  /medical-records/{recordId}:
+    get:
+      summary: get details of a medical record 
+      tags: [medical records]
+      parameters: 
+        - name: recordId
+          in: path
+          required: true 
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MedicalRecord'
+        404:
+          description: Not found
+          
+  /staff:
+    get:
+      summary: retrieve all staff 
+      tags: [staff]
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array 
+                items: 
+                  $ref: '#/components/schemas/Staff'
+    post: 
+      summary: add a new staff 
+      tags: [staff]
+      requestBody:
+        required: true 
+        content: 
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Staff'
+      responses:
+        201:
+          description: Staff successfully added
+          
+  /staff/{staffId}:
+    get:
+      summary: get details of a staff
+      tags: [staff]
+      parameters: 
+        - name: staffId
+          in: path
+          required: true 
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Staff'
+        404:
+          description: Not found
+          
+  /users:
+    get:
+      summary: retrieve all users
+      tags: [users]
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array 
+                items: 
+                  $ref: '#/components/schemas/User'
+    post: 
+      summary: add a new user 
+      tags: [users]
+      requestBody:
+        required: true 
+        content: 
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        201:
+          description: User successfully added
+          
+  /users/{userId}:
+    get:
+      summary: get details of a user
+      tags: [users]
+      parameters: 
+        - name: userId
+          in: path
+          required: true 
+          schema:
+            type: integer
+      responses:
+        200:
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        404:
+          description: Not found
 
 components:
   schemas:
-    Pet:
+    Animal:
       type: object
       properties:
-        id:
-          type: string
-          example: "1"
-        name:
-          type: string
-          example: "Mochi"
-        species:
-          type: string
-          example: "dog"
-        age:
-          type: integer
-          example: 2
-        adopted:
-          type: boolean
-          example: false
-    NewPet:
+        id: {type: integer, example: 1}
+        name: {type: string, example: "Coco"}
+        species: {type: string, example: "Cat"}
+        breed: {type: string, example: "Siamese"}
+        age: {type: integer, example: 2}
+        gender: {type: string, example: "M"}
+        status: {type: string, example: "Available"}
+
+    Adopter: 
       type: object
       properties:
-        name:
-          type: string
-        species:
-          type: string
-        age:
-          type: integer
+        id: {type: integer, example: 1}
+        name: {type: string, example: "Sierra Madre"}
+        email: {type: string, example: "sierramadre@gmail.com"}
+        address: {type: string, example: "123 Bolao Street"}
+        contactNo: {type: string, example: "09171234567"}
+
+    Application:
+      type: object
+      properties:
+        id: {type: integer, example: 1}
+        dateApplied: {type: string, format: date, example: "2025-11-12"}
+        status: {type: string, example: "Approved"}
+
+    Appointment:
+      type: object
+      properties:
+        id: {type: integer, example: 1}
+        scheduleDate: {type: string, format: date, example: "2025-11-12"}
+        status: {type: string, example: "Scheduled"}
+        purpose: {type: string, example: "Finalize an adoption"}
+
+    MedicalRecord:
+      type: object
+      properties:
+        id: {type: integer, example: 1}
+        recordDate: {type: string, format: date, example: "2025-11-12"}
+        recordType: {type: string, example: "Vaccination"}
+
+    Staff:
+      type: object
+      properties:
+        id: {type: integer, example: 1}
+        name: {type: string, example: "Sierra Madre"}
+        email: {type: string, example: "sierramadre@gmail.com"}
+        contactNo: {type: string, example: "09171234567"}
+
+    User:
+      type: object
+      properties:
+        id: {type: integer, example: 1}
+        username: {type: string, example: "sierramadre"}
+        password: {type: string, example: "sierramadre123"}
