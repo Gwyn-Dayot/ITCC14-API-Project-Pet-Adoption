@@ -4,14 +4,32 @@
   "description": "1. [Elisha Cogtas](https://github.com/elliecogtas)\r 2. [Christine Dy](https://github.com/christinedy)\r 3. [Klent Pimentel](https://github.com/klentpimentel22)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^9.0.0",
     "swagger-ui-express": "^5.0.1",
     "yaml": "^2.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gwyn-Dayot/ITCC14-API-Project-Pet-Adoption.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Gwyn-Dayot/ITCC14-API-Project-Pet-Adoption/issues"
+  },
+  "homepage": "https://github.com/Gwyn-Dayot/ITCC14-API-Project-Pet-Adoption#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }
