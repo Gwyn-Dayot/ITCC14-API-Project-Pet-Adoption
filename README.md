@@ -24,26 +24,26 @@ Finalize our project topic (“Pet Adoption API”), define the main features (p
 - [x] Finalize project topic and objectives
 - [x] [Define core entities](https://docs.google.com/document/d/1gwaxaenAsN2hqLeil731vQQ-qCVkPmXtISHLpshR6i0/edit?tab=t.8ng2ahe8vcia)
 - [x] Write “Problem Statement” and “Objectives”
-- [ ] Create initial data model diagram
+- [x] Create initial data model diagram
 
 --------------------------------
 
 ## Milestone 2 (Nov Week 2): API Design & Setup
 * What we'll do:
 
-Design the API structure and plan endpoints (e.g., /pets, /users, /adoptions). Set up the project folder, initialize Git, and configure Flask.
+Design the API structure and plan endpoints (e.g., /pets, /users, /adoptions). Set up the project folder, initialize Git, and configure Express.
  
 * Deliverables:
 
   * api.yaml or Postman collection with endpoint list.
-  * Functional project folder with main API file (e.g., app.py).
+  * Functional project folder with main API file.
 
 * Checklist:
 
-- [ ] Plan and document all API endpoints
-- [ ] Set up Flask environment
-- [ ] Create initial routes and run local server
-- [ ] Commit setup files and documentation to GitHub
+- [x] Plan and document all API endpoints
+- [x] Set up Express environment
+- [x] Create initial routes and run local server
+- [x] Commit setup files and documentation to GitHub
 
 -----------------------------------------------------
 
@@ -51,16 +51,16 @@ Design the API structure and plan endpoints (e.g., /pets, /users, /adoptions). S
 
 * What we'll do:
 
-Implement the database (SQLite/MongoDB) and connect it to the API. Add core features like viewing pets, creating adoption requests, and managing users.
+Implement the database (MongoDB) and connect it to the API. Add core features like viewing pets, creating adoption requests, and managing users.
  
 * Deliverables:
 
   * Working API routes with database connection.
-  * Postman test results of working endpoints.
+  * Postman test results of working endpoints (We used ThunderClient).
 
 * Checklist:
 
-- [ ] Create database models (Pets, Users, Adoptions)
+- [x] Create database models (Pets, Users, Adoptions)
 - [ ] Implement GET/POST endpoints for Pets and Adoptions
 - [ ] Test endpoints in Postman
 - [ ] Commit all working code to GitHub
