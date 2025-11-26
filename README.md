@@ -61,9 +61,9 @@ Implement the database (MongoDB) and connect it to the API. Add core features li
 * Checklist:
 
 - [x] Create database models (Pets, Users, Adoptions)
-- [ ] Implement GET/POST endpoints for Pets and Adoptions
-- [ ] Test endpoints in Postman
-- [ ] Commit all working code to GitHub
+- [x] Implement GET/POST endpoints for Pets and Adoptions
+- [x] Test endpoints in Postman (We used ThunderClient)
+- [x] Commit all working code to GitHub (latest commit on dev branch)
 
 ------------------------------------------------
 
