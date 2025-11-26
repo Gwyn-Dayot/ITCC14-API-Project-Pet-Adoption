@@ -1,6 +1,6 @@
 import Animal from "../models/Animal.js";
 
-// GET /animals
+
 export const getAnimals = async (req, res) => {
   console.log("GET /animals hit");
   try {
@@ -13,7 +13,7 @@ export const getAnimals = async (req, res) => {
   }
 };
 
-// POST /animals
+
 export const addAnimal = async (req, res) => {
   console.log("POST /animals called, body:", req.body);
   try {
@@ -26,7 +26,7 @@ export const addAnimal = async (req, res) => {
   }
 };
 
-// GET /animals/:animalId
+
 export const getAnimalById = async (req, res) => {
   try {
     const animal = await Animal.findById(req.params.animalId);
@@ -37,7 +37,7 @@ export const getAnimalById = async (req, res) => {
   }
 };
 
-// PATCH /animals/:animalId
+
 export const updateAnimal = async (req, res) => {
   try {
     const updated = await Animal.findByIdAndUpdate(req.params.animalId, req.body, { new: true });
@@ -48,7 +48,7 @@ export const updateAnimal = async (req, res) => {
   }
 };
 
-// DELETE /animals/:animalId
+
 export const deleteAnimal = async (req, res) => {
   try {
     const removed = await Animal.findByIdAndDelete(req.params.animalId);
