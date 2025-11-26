@@ -1,22 +1,23 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
+import express from "express";
+import dotenv from "dotenv";
+import cors from "cors";
+import connectDB from "./config/db.js";
 
-import petRoutes from './routes/pets.js';
-import userRoutes from './routes/users.js';
-import adoptionRoutes from './routes/adoptions.js';
+import animalRoutes from "./routes/animalRoutes.js";
+import adopterRoutes from "./routes/adopterRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
 
 dotenv.config();
-const app = express();
+connectDB();
 
+const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/pets', petRoutes);
-app.use('/api/users', userRoutes);
-app.use('/api/adoptions', adoptionRoutes);
+app.use("/animals", animalRoutes);
+app.use("/adopters", adopterRoutes);
+app.use("/users", userRoutes);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(5000, () => {
+  console.log("Server running on port 5000");
 });
