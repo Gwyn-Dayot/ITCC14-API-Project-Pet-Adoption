@@ -1,5 +1,7 @@
 # ITCC14-API-Project-Pet-Adoption
 
+complete repo: [PAwdoption(https://github.com/elliecogtas/pawdoption-ellie)]
+
 ## Members
 
 1. [Elisha Cogtas](https://github.com/elliecogtas)
@@ -45,8 +47,8 @@ Design the API structure and plan endpoints (e.g., /pets, /users, /adoptions). S
 
 - [x] Plan and document all API endpoints
 - [x] Set up Flask environment
-- [ ] Create initial routes and run local server
-- [ ] Commit setup files and documentation to GitHub
+- [x] Create initial routes and run local server
+- [x] Commit setup files and documentation to GitHub
 
 -----------------------------------------------------
 
@@ -63,10 +65,10 @@ Implement the database (SQLite/MongoDB) and connect it to the API. Add core feat
 
 * Checklist:
 
-- [ ] Create database models (Pets, Users, Adoptions)
-- [ ] Implement GET/POST endpoints for Pets and Adoptions
-- [ ] Test endpoints in Postman
-- [ ] Commit all working code to GitHub
+- [x] Create database models (Pets, Users, Adoptions)
+- [x] Implement GET/POST endpoints for Pets and Adoptions
+- [x] Test endpoints in Postman
+- [x] Commit all working code to GitHub
 
 ------------------------------------------------
 
@@ -83,9 +85,9 @@ Add input validation, error handling, and improve the response messages. Test al
 
 * Checklist:
 
-- [ ] Add input validation for forms
+- [x] Add input validation for forms
 - [ ] Handle missing data and invalid IDs
-- [ ] Verify all CRUD routes work correctly
+- [x] Verify all CRUD routes work correctly
 - [ ] Update documentation and push changes
 
 ## Team Members
