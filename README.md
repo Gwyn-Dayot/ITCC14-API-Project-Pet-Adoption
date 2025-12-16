@@ -1,6 +1,6 @@
 # ITCC14-API-Project-Pet-Adoption
 
-complete repo: [PAwdoption(https://github.com/elliecogtas/pawdoption-ellie)]
+complete repo: [PAwdoption](https://github.com/elliecogtas/pawdoption-ellie)
 
 ## Members
 
